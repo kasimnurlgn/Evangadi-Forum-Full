@@ -1,3 +1,9 @@
+const dbConnection = require("../database/dbConfig");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const { StatusCodes } = require("http-status-codes");
+require("dotenv").config();
+
 // register function
 async function register(req, res) {
   const { username, first_name, last_name, email, password } = req.body;
