@@ -1,4 +1,4 @@
-const dbConnection = require("../database/dbConfig");
+const dbConnection = require("../database/DbConfig");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { StatusCodes } = require("http-status-codes");
@@ -34,12 +34,12 @@ async function register(req, res) {
     }
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
-    // Insert user into our database 
+    // Insert user into our database
     await dbConnection.query(
       "INSERT INTO users (username, first_name, last_name, email, password) VALUES (?, ?, ?, ?, ?)",
       [username, first_name, last_name, email, hashedPassword]
     );
-    res 
+    res
       .status(StatusCodes.CREATED)
       .json({ message: "User registered successfully" });
   } catch (error) {
