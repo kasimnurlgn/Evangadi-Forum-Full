@@ -1,14 +1,9 @@
 const bcrypt = require("bcrypt");
-const dbConnection = require("../database/dbConfig");
-
+const dbConnection = require("../database/sesrverdb");
 const jwt = require("jsonwebtoken");
 const { StatusCodes } = require("http-status-codes");
 require("dotenv").config();
 const fs = require("fs");
-console.log(
-  "Contents of ../database:",
-  fs.readdirSync(__dirname + "/../database")
-);
 
 // register function
 async function register(req, res) {
