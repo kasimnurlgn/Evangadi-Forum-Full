@@ -1,11 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-// Routes 
+// Routes
 const userRoutes = require("./routes/userRoutes");
 const questionRoutes = require("./routes/questionRoutes");
 const answerRoutes = require("./routes/answerRoutes");
-//Teh connection 
+//Teh connection
 const dbConnection = require("./database/dbConfig");
 
 const app = express();
