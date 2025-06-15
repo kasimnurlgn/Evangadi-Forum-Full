@@ -19,7 +19,7 @@ async function start() {
   try {
     const [result] = await dbConnection.query("SELECT 'test'");
     console.log("Database test successful:", result);
-    const PORT = process.env.PORT || 3306;
+    const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   } catch (error) {
     console.error("Failed to start server:", error.message);
