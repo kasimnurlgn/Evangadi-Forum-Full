@@ -6,7 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 const questionRoutes = require("./routes/questionRoutes");
 const answerRoutes = require("./routes/answerRoutes");
 //Teh connection
-const dbConnection = require("./database/sesrverdb");
+const dbConnection = require("./database/dbConfig");
 
 const app = express();
 app.use(express.json());

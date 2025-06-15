@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const dbConnection = require("../database/sesrverdb");
+const dbConnection = require("../database/dbConfig");
 const jwt = require("jsonwebtoken");
 const { StatusCodes } = require("http-status-codes");
 require("dotenv").config();
