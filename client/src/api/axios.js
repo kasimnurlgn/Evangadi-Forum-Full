@@ -1,5 +1,5 @@
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "http://localhost:3306/api",
+  baseURL: "https://evangadi-forum-backend-m6d7.onrender.com/api",
 });
 export default instance;
