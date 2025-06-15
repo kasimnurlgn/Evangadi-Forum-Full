@@ -3,24 +3,28 @@ import classes from "./Header.module.css";
 import headerLogo from "../../assets/headerLogo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+
   const signOut = () => {
     localStorage.removeItem("token");
     setIsAuthenticated(false);
     navigate("/login");
   };
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   useEffect(() => {
     // Check if user is authenticated by looking for a token in localStorage
     setIsAuthenticated(!!token);
   }, [token]);
+
   return (
     <header className={classes.header}>
       {/* Logo */}

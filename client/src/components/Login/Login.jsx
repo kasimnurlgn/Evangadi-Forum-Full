@@ -37,11 +37,10 @@ function Login({ visible }) {
         const token = loginResponse.data.token;
         localStorage.setItem("token", token);
 
-        // Manually set Authorization header for /users/check
         const checkResponse = await instance.get("/users/check", {
           headers: { Authorization: `Bearer ${token}` },
         });
-        setUser(checkResponse.data.username); // Adjust based on actual response
+        setUser(checkResponse.data.username);
         navigate("/");
       }
     } catch (error) {

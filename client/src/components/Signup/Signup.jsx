@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const SignUp = ({ visible }) => {
-  const { show, setShow } = visible;
+  const { setShow } = visible;
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -39,7 +39,6 @@ const SignUp = ({ visible }) => {
         email: email,
         password: password,
       });
-      console.log("User Registerd");
       setShow(false);
     } catch (error) {
       setIsLoading(false);
