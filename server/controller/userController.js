@@ -64,7 +64,7 @@ async function login(req, res) {
   }
 
   try {
-    // Find user by email
+    // Find auser by email
     const [users] = await dbConnection.query(
       "SELECT * FROM users WHERE email = ?",
       [email]
