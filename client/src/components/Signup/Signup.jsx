@@ -27,12 +27,11 @@ const SignUp = ({ visible }) => {
     // Validate required fields
     if (!userName || !firstName || !lastName || !email || !password) {
       setError("Please fill in all required fields.");
-      // setIsLoading(false);
       return;
     }
 
     try {
-      const response = await instance.post("users/register", {
+      const response = await instance.post("/users/register", {
         username: userName,
         first_name: firstName,
         last_name: lastName,
@@ -43,8 +42,8 @@ const SignUp = ({ visible }) => {
     } catch (error) {
       setIsLoading(false);
       if (error.response) {
-        console.log(error.response.data);
-        setError(error.response.data.message); // Show server error message
+        // console.log(error.response.data);
+        setError(error.response.data.message);
       } else {
         setError("An unexpected error occurred.");
       }

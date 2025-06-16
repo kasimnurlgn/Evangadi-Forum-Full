@@ -57,7 +57,7 @@ const Question = () => {
       setTimeout(() => {
         setAlertMessage("");
         navigate("/", { state: { newQuestion } });
-      }, 2000);
+      }, 1000);
     } catch (error) {
       setIsLoading(false);
       console.error("Error posting question:", error);
