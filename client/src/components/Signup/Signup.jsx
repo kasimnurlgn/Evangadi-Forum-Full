@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Classes from "./Signdvdnvup.module.css";
+import Classes from "./Signup.module.css";
 import { BiHide, BiShow } from "react-icons/bi";
 import instance from "../../api/axios";
 import { Link, useNavigate } from "react-router-dom";
