@@ -20,7 +20,7 @@ const SignUp = ({ visible }) => {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { 
     setIsLoading(true);
     e.preventDefault();
 

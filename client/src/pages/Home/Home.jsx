@@ -119,7 +119,6 @@ function Home() {
                         <IoMdContact size={80} />
                         <div className={classes.home__questionusername}>
                           <h3>{question.username}</h3>{" "}
-                          {/* Changed from user_name to username */}
                         </div>
                       </div>
                       <div className={classes.home__questiontitle}>

@@ -62,7 +62,7 @@ function Answer() {
     try {
       const response = await instance.post(
         `/answers`,
-        { question_id: questionId, content: answer }, // Fixed to match backend
+        { question_id: questionId, content: answer },
         { headers: { Authorization: "Bearer " + token } }
       );
       if (response.status === 201) {

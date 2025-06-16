@@ -50,7 +50,7 @@ const Question = () => {
         title,
         description,
         username: user, // Use username from AppContext
-        created_at: new Date().toISOString(), // Approximate created_at
+        created_at: new Date().toISOString(), 
       };
 
       // Redirect to home page with new question in state
